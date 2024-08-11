@@ -39,6 +39,7 @@ import {
 
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
+console.log(backendUrl)
 
 function App() {
     const [url, setUrl] = useState('');
