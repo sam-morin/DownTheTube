@@ -59,6 +59,9 @@ There aren't really any self-hosted YouTube video downloader web applications th
 
 ### Production
 
+## For prod, you'd probably be better off using Docker Compose
+<a href="https://github.com/sam-morin/DownTheTube-docker-compose">Go to DownTheTube Docker Compose repo</a>
+
 1. Pull the source and CD
 ```shell
 git pull https://github.com/sam-morin/DownTheTub.git && cd DownTheTub
