@@ -22,9 +22,8 @@ FROM nginx:stable-alpine
 # Copy the build output to Nginx's web directory
 COPY --from=0 /app/dist /usr/share/nginx/html
 
-# Expose port 5173 to the outside world
-EXPOSE 5173
-# Change this to the port that you want to use externally, if you need to change it. 5173 will work.
+# Expose port 80 to the outside world
+EXPOSE 80
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
