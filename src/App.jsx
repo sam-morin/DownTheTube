@@ -38,6 +38,8 @@ import {
 } from '@tabler/icons-react';
 
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 function App() {
     const [url, setUrl] = useState('');
     const [videoInfo, setVideoInfo] = useState({});
@@ -58,7 +60,7 @@ function App() {
         });
         // handle download to server
         try {
-            const response = await fetch(`${window.location.href}download`, {
+            const response = await fetch(`${backendUrl}/download`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -150,7 +152,7 @@ function App() {
             return;
         }
         try {
-            const response = await fetch(`${window.location.href}info`, {
+            const response = await fetch(`${backendUrl}/info`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -284,7 +286,7 @@ function App() {
                     <br/>
                     <Group justify='space-between' align='center'>
                       <Stack>
-                        <Text size={"52px"} className='title'><b>DownTheTube</b></Text>
+                        <Text size={"2.5rem"} className='title'><b>DownTheTube</b></Text>
                         {/* <Text size={"12px"} style={{ marginTop: '-20px' }}>from smorin</Text> */}
                       </Stack>
                       <ActionIcon
