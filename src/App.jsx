@@ -58,7 +58,7 @@ function App() {
         });
         // handle download to server
         try {
-            const response = await fetch('http://localhost:5001/download', {
+            const response = await fetch(`${window.location.href}download`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ function App() {
             return;
         }
         try {
-            const response = await fetch('http://localhost:5001/info', {
+            const response = await fetch(`${window.location.href}info`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
