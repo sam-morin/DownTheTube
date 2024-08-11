@@ -57,14 +57,13 @@ There aren't really any self-hosted YouTube video downloader web applications th
 
 # Running
 
-### Production
-
-## For prod, you'd probably be better off using Docker Compose
+### For anything other than development, you'd probably be better off using Docker Compose
 <a href="https://github.com/sam-morin/DownTheTube-docker-compose">Go to DownTheTube Docker Compose repo</a>
 
-1. Pull the source and CD
+### Production
+1. Clone the source and CD
 ```shell
-git pull https://github.com/sam-morin/DownTheTube.git && cd DownTheTube
+git clone https://github.com/sam-morin/DownTheTube.git && cd DownTheTube
 ```
 
 2. Build image
@@ -79,9 +78,9 @@ docker run -d --restart unless-stopped -p SOME_PUBLIC_PORT:80 downthetube-fronte
 
 ### Development
 
-1. Pull the source and CD
+1. Clone the source and CD
 ```shell
-git pull https://github.com/sam-morin/DownTheTube.git && cd downthetube-frontend
+git clone https://github.com/sam-morin/DownTheTube.git && cd downthetube-frontend
 ```
 
 2. Install node modules
