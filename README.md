@@ -64,7 +64,7 @@ There aren't really any self-hosted YouTube video downloader web applications th
 
 1. Pull the source and CD
 ```shell
-git pull https://github.com/sam-morin/DownTheTub.git && cd DownTheTub
+git pull https://github.com/sam-morin/DownTheTube.git && cd DownTheTube
 ```
 
 2. Build image
@@ -74,7 +74,7 @@ docker build . -t downthetube-frontend
 
 3. Run the image
 ```shell
-docker run -d --restart unless-stopped -p SOME_PUBLIC_PORT:3000 downthetube-frontend
+docker run -d --restart unless-stopped -p SOME_PUBLIC_PORT:80 downthetube-frontend
 ```
 
 ### Development
