@@ -388,11 +388,11 @@ function App() {
                       <Center>
                         <div className="thumbnail-container" style={{cursor: 'pointer'}} onClick={() => window.open(videoInfo.url, '_blank')}>
                           {/* <Tooltip label="Open in new tab" position='bottom-end' withArrow> */}
-                            <img src={videoInfo.thumbnail_url} width={300} alt="Thumbnail" />
+                            <img src={DOMPurify.sanitize(videoInfo.thumbnail_url)} width={300} alt="Thumbnail" />
                           {/* </Tooltip> */}
                         </div>
                       </Center>
-                      <Text onClick={() => window.open(videoInfo.url, '_blank')} order={2} style={{paddingTop: '20px', cursor: 'pointer', fontSize: '28px', fontWeight: 'bold'}}>{videoInfo.title}</Text>
+                      <Text onClick={() => window.open(videoInfo.url, '_blank')} order={2} style={{paddingTop: '20px', cursor: 'pointer', fontSize: '28px', fontWeight: 'bold'}}>{DOMPurify.sanitize(videoInfo.title)}</Text>
                       <br/>
                       <Group justify='space-between'>
                         <Stack gap={0}>
