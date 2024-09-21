@@ -91,7 +91,7 @@ function App() {
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 const safeTitle = DOMPurify.sanitize(videoInfo.title);
-                a.href = url;
+                a.href = DOMPurify.sanitize(url);
                 a.download = `${safeTitle}.mp4`;
                 document.body.appendChild(a);
                 a.click();
