@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import ReactTimeAgo from 'react-time-ago'
 import logo from './assets/play-button-4210.svg';
+import DOMPurify from 'dompurify';
 
 // mantine imports
 import '@mantine/core/styles.css';
@@ -89,8 +90,9 @@ function App() {
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
+                const safeTitle = DOMPurify.sanitize(videoInfo.title);
                 a.href = url;
-                a.download = `${videoInfo.title}.mp4`;
+                a.download = `${safeTitle}.mp4`;
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
