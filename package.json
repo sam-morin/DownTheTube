@@ -14,7 +14,7 @@
     "@mantine/hooks": "^7.12.0",
     "@mantine/notifications": "^7.12.0",
     "@tabler/icons-react": "^3.14.0",
-    "javascript-time-ago": "^2.5.10",
+    "javascript-time-ago": "^2.5.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-time-ago": "^7.3.3"
