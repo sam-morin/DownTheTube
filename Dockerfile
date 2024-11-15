@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Use an official Nginx image to serve the built app
-FROM nginx:stable-alpine
+FROM nginx:1.26-alpine3.20
 
 # Copy the build output to Nginx's web directory
 COPY --from=0 /app/dist /usr/share/nginx/html
